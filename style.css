@@ -62,3 +62,22 @@ img{
 .flip{
     transform:rotateY(0deg);
 }
+.match{
+    transform:rotateY(0deg);
+}
+.show{
+    transform:rotateY(0deg);
+}
+@media screen and (min-width: 770px) {
+    .head {
+      max-width: 760px;
+    }
+  
+    .container {
+      grid-template-columns: repeat(4, auto);
+    }
+  
+    .cell div {
+      height: 170px;
+    }
+  }
