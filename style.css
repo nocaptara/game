@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color:aliceblue;
+    background-color:#f2f2f2;
 }
 .head{
     max-width: 480px;
@@ -17,14 +17,10 @@ body{
     flex-direction: column;
     margin-bottom: 15px;
     margin-top: 15px;
+    color: #333
 }
 .score{
     margin-top: 10px;
-}
-img{
-    height: 80px;
-    width:80px;
-    border-radius: 20%;
 }
 .container{
     max-width: 900px;
@@ -32,28 +28,37 @@ img{
     grid-template-columns: repeat(3,auto);
     gap:1rem;
     margin:auto; 
+    padding: 20px;
 }
-div.cell{
+.cell div{
     height:100px;
 }
+
+.cell{
+    position:relative;
+    cursor: pointer;
+}
+
 .front{
-    border:2px solid rgb(118, 117, 117);
+   
     position:absolute;
     height:90%;
     width:90%;
     display:flex;
     justify-content: center;
     align-items: center;
+    border:2px solid rgb(118, 117, 117);
     background-color: azure;
-    transform: rotateY('90deg');
+    transform: rotateY(90deg);
 }
-.cell{
-    position:relative;
-    cursor: pointer;
+.back{
+    background-color: #333;
 }
-.container .back{
-    background-color: rgb(6, 6, 6);
+img{
+    height: 80px;
+    width:80px;
+    border-radius: 20%;
 }
 .flip{
-    transform:rotateY('0deg');
+    transform:rotateY(0deg);
 }
