@@ -17,7 +17,8 @@ body{
     flex-direction: column;
     margin-bottom: 15px;
     margin-top: 15px;
-    color: #333
+    color: #333;
+    
 }
 .score{
     margin-top: 10px;
@@ -43,7 +44,7 @@ body{
    
     position:absolute;
     height:90%;
-    width:90%;
+    width:100%;
     display:flex;
     justify-content: center;
     align-items: center;

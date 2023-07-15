@@ -76,4 +76,40 @@ function match(cardOne , cardTwo){
             cardTwo.classList.remove('flip') 
         }, 1000);
     }
+    // Set the initial time in seconds
+let time = 60;
+
+// Get the timer element from the HTML
+const timerElement = document.getElementById('timer');
+
+// Function to update the timer display
+function updateTimerDisplay() {
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+  timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+}
+
+// Function to handle the timer
+function startTimer() {
+  updateTimerDisplay();
+  const timerInterval = setInterval(() => {
+    time--;
+    updateTimerDisplay();
+
+    // Check if the time has reached 0
+    if (time === 0) {
+      clearInterval(timerInterval);
+      // Add your code here to handle the end of the game or any other action
+      alert("You lost!");
+
+
+      shuffleall("Time's up!");
+    }
+  }, 1000);
+}
+
+// Call the startTimer function to begin the countdown
+startTimer();
+
+
 }
